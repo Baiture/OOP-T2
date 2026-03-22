@@ -1,0 +1,124 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class ConCho {
+private:
+    string name;
+    string color;
+    string type;
+    string emotion;
+
+public:
+    ConCho() {
+        name = "A";
+        color = "Den";
+        type = "fox";
+        emotion = "vui";
+    }
+
+    void Sua() {
+        cout << name << " dang sua" << endl;
+    }
+
+    void Vay_Duoi() {
+        cout << name << " dang vay duoi" << endl;
+    }
+
+    void An() {
+        cout << name << " dang an" << endl;
+    }
+
+    void Chay() {
+        cout << name << " dang chay" << endl;
+    }
+
+    void display() {
+        cout << "ten em la: " << name << "||" << "long mau " << color << "||" << "em nay giong cho " << type << "||" << "trong em co ve dang " << emotion << endl;
+        cout << "                                 ---------------------------------------------                 " << endl;
+    }
+};
+
+class Oto {
+private:
+    string Hang;
+    string Size;
+    string color;
+    string gia;
+public:
+    Oto() {
+        Hang = "BMW";
+        Size = "4696x 1943x 1288 mm";
+        color = "den";
+        gia = "163.000 USD";
+    }
+    void Toc_Do() {
+        cout << "Toc do dang la la 250 km/h" << endl;
+    }
+    void Giam_Toc() {
+        cout << "giam toc ve 50 km/h khi di vao khu dan cu truong hoc" << endl;
+    }
+    void Va_Cham() {
+        cout << "phat hien chuong ngai vat,da xay ra va cham bat tui khi" << endl;
+        cout <<"                                 --------------------------------------------------                     "<< endl;
+    }
+    void display() {
+        cout << "xe nay em moi mua hang " << Hang << "\n kich thuoc goc la " << Size << "\n con nay mau " << color << "ban nay dang roi vao khoang " << gia << endl;
+    }
+};
+
+class Bank_Account {
+private:
+    string Name;
+    string Bank_ID;
+    string Bank_Name;
+    double Balance;
+public:
+    Bank_Account() {
+        Name = "Nguyen Hoang Hai";
+        Bank_ID = "3420046688";
+        Bank_Name = "MB Bank";
+        Balance = 3636;
+    }
+    void Rut_Tien(double Tien_Rut) {
+        if ( Tien_Rut>Balance ){
+            cout << "so du khong du.di kiem tien di!" << endl;
+        }
+        else {
+            cout << "mat them " << Tien_Rut <<" dong roi.Tiep tuc kiem tien di!"<< endl;
+        }
+    }
+    void Gui_Tien(double Tien_Gui) {
+        Balance += Tien_Gui;
+        cout << "Xac nhan so tien gui la " << Tien_Gui << endl;
+        cout << "Gui tien thanh cong so du hien tai la: " << Balance << "\n Hay tiep tuc lam viec de gui nhieu tien hon!" << endl;
+    }
+    void check_Bank() {
+        cout << "so tien hien tai trong tai khoan cua quy khach la " << Balance << endl;
+    }
+    void display() {
+        cout << "ten chu tai khoan la :" << Name << endl;cout << "So tk la : " << Bank_ID << endl;cout << "dang dung ngan hang : " << Bank_Name << endl;cout << "so du hien tai la : " << Balance << endl;
+        cout << "____________________"<<endl;
+    }
+};
+int main() {
+    ConCho cho;
+    cho.Sua();
+    cho.Vay_Duoi();
+    cho.An();
+    cho.Chay();
+    cho.display();
+
+    Oto car;
+    car.display();
+    car.Toc_Do();
+    car.Giam_Toc();
+    car.Va_Cham();
+
+    Bank_Account Bank;
+    Bank.display();
+    Bank.Rut_Tien(2000);
+    Bank.Gui_Tien(1000);
+    Bank.check_Bank();
+}
