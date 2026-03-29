@@ -58,7 +58,7 @@ public:
 };
 
 int main() {
-    NhanVien nv("Nguyen Van A", 5000000, 2.5);
+    NhanVien nv("Tran Duc Anh Minh", 13000000, 2.5);
     nv.inTTin();
     cout << "\nThuc hien tang he so luong them 1.0..." << endl;
     if (nv.tangLuong(1.0)) {
