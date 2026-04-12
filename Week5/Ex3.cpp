@@ -6,7 +6,7 @@
 using namespace std;
 
 class CanBo {
-protected:
+private:
     string hoTen;
     int tuoi;
     string gioiTinh;
