@@ -1,50 +1,21 @@
-#include <iostream>
-#include <cmath>
-using namespace std;
-
-class Point {
-private:
-    int x, y;
-
+class PointTest {
 public:
-    Point() {
-        x = 0;
-        y = 1;
-    }
+    void testCase() {
+        Point A(3, 4);
+        std::cout << "A = ";
+        A.print();
 
-    Point(int x, int y) {
-        this->x = x;
-        this->y = y;
-    }
+        Point B;
+        B.read();
+        std::cout << "B = ";
+        B.print();
 
-    void read() {
-        cin >> x >> y;
-    }
+        Point C(-B.getX(), -B.getY());
+        std::cout << "C = ";
+        C.print();
 
-    void print() {
-        cout << "(" << x << ", " << y << ")" << endl;
-    }
+        std::cout << "Khoang cach tu B den O: " << B.distance() << std::endl;
 
-    void move(int dx, int dy) {
-        x = x + dx;
-        y = y + dy;
-    }
-
-    int getX() {
-        return x;
-    }
-
-    int getY() {
-        return y;
-    }
-
-    double distance() {
-        return sqrt((double)x * x + (double)y * y);
-    }
-
-    double distance(Point P) {
-        int dx = this->x - P.x;
-        int dy = this->y - P.y;
-        return sqrt((double)dx * dx + (double)dy * dy);
+        std::cout << "Khoang cach tu A den B: " << A.distance(B) << std::endl;
     }
 };
