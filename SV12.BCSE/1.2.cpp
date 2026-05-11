@@ -14,8 +14,8 @@ public:
         std::cout << "C = ";
         C.print();
 
-        std::cout << "Khoang cach tu B den O: " << B.distance() << std::endl;
+        std::cout << std::fixed << std::setprecision(1) << "Khoang cach tu B den O: " << B.distance() << std::endl;
 
-        std::cout << "Khoang cach tu A den B: " << A.distance(B) << std::endl;
+        std::cout << std::fixed << std::setprecision(1) << "Khoang cach tu A den B: " << A.distance(B) << std::endl;
     }
 };
