@@ -4,32 +4,45 @@
 
 class Point {
 private:
-    double x, y;
+    int x, y;
 
 public:
-    Point(double x = 0, double y = 0) : x(x), y(y) {}
+    Point() {
+        x = 0;
+        y = 1;
+    }
 
-    double getX() const { return x; }
-    double getY() const { return y; }
+    Point(int x, int y) {
+        this->x = x;
+        this->y = y;
+    }
 
     void read() {
         std::cin >> x >> y;
     }
 
-    void move(double dx, double dy) {
+    void print() {
+        std::cout << "(" << x << ", " << y << ")" << std::endl;
+    }
+
+    void move(int dx, int dy) {
         x += dx;
         y += dy;
     }
 
-      double distance(const Point& other) const {
-        return std::sqrt(std::pow(x - other.x, 2) + std::pow(y - other.y, 2));
+    int getX() {
+        return x;
     }
 
-    double distance() const {
-        return std::sqrt(x * x + y * y);
+    int getY() {
+        return y;
     }
 
-    void print() const {
-        std::cout << "(" << x << ", " << y << ")";
+    double distance() {
+        return std::sqrt(std::pow(x, 2) + std::pow(y, 2));
+    }
+
+    double distance(Point P) {
+        return std::sqrt(std::pow(x - P.x, 2) + std::pow(y - P.y, 2));
     }
 };
