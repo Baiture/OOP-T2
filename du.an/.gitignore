@@ -1,0 +1,63 @@
+# ─── IDE rác (CLion / JetBrains)
+.idea/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# ─── CMake 
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# ─── File thực thi và rác hệ thống 
+# Linux / macOS
+*.out
+*.app
+*.dSYM/
+a.out
+
+# Windows
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.obj
+Debug/
+Release/
+x64/
+x86/
+
+# ─── Object files và thư viện biên dịch 
+*.o
+*.a
+*.so
+*.dylib
+
+# ─── File não / trọng số đã học (tuỳ chọn – xoá dòng này nếu muốn commit) ─
+# brain.txt
+
+# ─── Các file tạm khác
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+*.orig
+
+# ─── Valgrind / profiler 
+callgrind.out.*
+massif.out.*
+vgcore.*
