@@ -43,7 +43,6 @@ int main() {
 
     // ── Save brain ──────────────────────────────────────────────────────────
     net.save("brain.txt");
-
     std::cout << "\n=== Loading brain into new network ===\n";
     NeuralNetwork net2(0.1);
     net2.add_layer(std::make_unique<LinearLayer>(2, 4));
